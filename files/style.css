@@ -1,0 +1,302 @@
+/* CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Bree Serif', serif;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+header{
+    position: sticky;
+    top: 2px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .5;
+    top: 0px;
+    left: 0px;
+}
+/* logo and image  */
+#logo{
+margin: 10px 45px;
+}
+#logo img{
+width: 150px;
+filter: invert(100%);
+cursor: pointer;
+}
+#logo img:hover{
+filter: invert(20%);
+
+}
+
+#navbar ul{
+    display: flex;
+}
+
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    list-style: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 3px 22px;
+    margin: 0 5px;
+    display: block;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .3s ease-in;
+}
+#navbar ul li a:hover{
+    color: #409b9a;
+    background-color: white;
+    border: 2px solid #409b9a;
+}
+
+
+/* Home Section  */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 485px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url('img/Home-Restaurant-Jim-Fahad-Digital-1.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    z-index: -1;
+    opacity: .89;
+    top: 0px;
+    left: 0px;
+}
+
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    color: white;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+    margin-bottom: 18px;
+}
+
+/* Services section */
+.services-container{
+    margin: px auto;
+}
+#services{
+    display: flex;
+    margin: 34px;
+}
+#services .box{
+    border: 2px solid  #409b9a;
+    background-color: #f2f2f2;
+    padding: 34px;
+    margin: 3px 8px;
+    border-radius: 28px;
+    box-shadow: 1px 1px 2px 3px rgba(107, 105, 103, 0.2);
+}
+#services .box img{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+#services .box img:hover{
+  transform: scale(1.2);
+  
+}
+
+
+#services .box p{
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    justify-content: center;
+
+}
+
+/* client Section  */
+
+#client{
+    display: flex;
+    flex-direction: column;
+   position: relative;
+   height: 500px;
+   justify-content: center;
+   align-items: center;
+}
+#client::before{
+    content: "";
+    background-image: url(img/About-Restaurant-Jim-Fahad-Digital-1.jpg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .7;
+}
+
+
+
+.clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.clients .clients-item{
+   padding: 20px;
+  }
+.clients .clients-item img{
+ height: 124px;
+ display: flex;
+ cursor: pointer;
+ transition: all .5s ease-in-out;
+
+
+}
+.clients .clients-item img:hover{
+    transform: scale(1.2);
+    filter: invert(80%);
+}
+
+
+/* contact us section  */
+
+#contact{
+    position: relative;
+    height: 100%;
+}
+#contact::before{
+content: "";
+position: absolute;
+background-image: url(img/contact\ us.jpg);
+background-position: center;
+background-size: cover;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: .3;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px 5px rgba(107, 105, 103, 0.2);
+
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 90px;
+    cursor: pointer;
+    border-top: 5px solid white;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* utility classes  */
+
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-size: 1.8rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:#409b9a;
+    color: white;
+    display: block;
+    width: 14rem;
+    margin: 17px auto;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+.btn:hover{
+    color: #409b9a;
+    background-color: white;
+    border: 2px solid #409b9a;
+ 
+ }
+
+.center{
+    text-align: center;
+}
+
+
+
+
+
